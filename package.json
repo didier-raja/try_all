@@ -1,0 +1,26 @@
+{
+  "name": "try_all",
+  "version": "1.0.0",
+  "description": "",
+  "main": "image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/didier-raja/try_all.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didier-raja/try_all/issues"
+  },
+  "homepage": "https://github.com/didier-raja/try_all#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.16.1"
+  }
+}
