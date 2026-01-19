@@ -1,0 +1,118 @@
+sidebar.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+            background-color: white;
+            color: black;
+            /* The 'all 0.6s' makes the color change smoothly */
+            transition: all 0.6s ease;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* 2. DARK STATE (Black Background, White Text) */
+        /* When JavaScript adds this class, the colors flip */
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* 3. THE BUTTON */
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 30px; /* Rounded circle edges */
+            border: 2px solid #333;
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+        }
+
+        /* Button also changes color in dark mode so it stays visible */
+        body.dark-mode button {
+            background-color: #333;
+            color: white;
+            border-color: white;
+        }
+        /* 1. THE SIDEBAR (Hidden by default using 'transform') */
+        .sidebar {
+            position: fixed;
+            left: -250px; /* Moves it off-screen */
+            width: 250px;
+            height: 100%;
+            background: #2c3e50;
+            transition: all 0.5s ease;
+            padding: 20px;
+            color: white;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Space between the lines */
+            z-index: 100;
+        }
+        .line {
+            width: 28px;
+            height: 3px;
+            background-color: #333;
+            transition: 0.4s;
+            border-radius: 2px;
+        }
+
+        .sidebar.active ~ .menu-btn .line {
+            background-color: white;
+        
+        }
+        p{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-btn" id="menuBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <p>Dashoard</p>
+        <p>Orders</p>
+        <p>Products</p>
+         <button id="modeBtn">Switch Mode</button>
+    </div>
+   <p>didier</p>
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebar = document.getElementById('sidebar');
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+          const btn = document.getElementById('modeBtn');
+
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
