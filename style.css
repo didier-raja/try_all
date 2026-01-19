@@ -1,0 +1,23 @@
+*{
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background: rgb(249, 246, 246);
+}
+.container{
+    background: white;
+    box-shadow: 0 0 5px black;
+    padding: 2rem;
+    border-radius: 6px;
+}
+input{
+    width: 80vh;
+    height: 4.5vh;
+}
+button{
+    cursor: pointer;
+    font-size: 17px;
+}
+::placeholder{
+
+}
