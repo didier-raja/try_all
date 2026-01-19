@@ -6,18 +6,29 @@ body{
 }
 .container{
     background: white;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px rgb(29, 106, 75);
     padding: 2rem;
     border-radius: 6px;
+    width: 110vh;
 }
 input{
     width: 80vh;
     height: 4.5vh;
+    font-size: 15px;
 }
 button{
     cursor: pointer;
     font-size: 17px;
+    background: rgb(9, 183, 55);
+    border: none;
+    width: 40vh;
+    height: 5.6vh;
+    color: white;
+    border-radius: 4px;
+}
+button:hover{
+    background: rgb(6, 138, 41);
 }
 ::placeholder{
-
+    font-family: 'Times New Roman', Times, serif;
 }
